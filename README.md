@@ -17,8 +17,10 @@ Guides:
 2. **Update** the `galaxy.yml` file
    1. feel free to use the `namespace: umn_community` namespace or create a new one
    2. set `name:` to the name of this collection
+   3. Make sure to increment the `version` section every time there is an update pushed to main or the upload will fail
 3. If you are not creating plug-ins you can delete that folder
 4. Add your roles to the 'roles' folder
 5. (Optional) Adjust the meta/runtime.yml file to reflect which versions of ansible this collection is appropriate for
 6. In either the Github Org or repo, create a Actions Secret named `AAP_HUB_TOKEN` and the value will come from generating a token [here](https://platform.aapjecq2y5bgr4mu.ansiblecloud.redhat.com/content/api-token)
 7. When ever you update your collection, make sure to update the version in the `galaxy.yml` file and merge into the 'main' branch.  This will trigger the github action to publish the updated collection.
+8. The Github Action supplied in this repo will build the collection and upload it to AAP when you merge into the `main` branch.  Check the github actions section of the repo to make sure it was successful.
